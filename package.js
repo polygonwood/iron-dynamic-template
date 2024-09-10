@@ -5,8 +5,8 @@ Package.describe({
   git: 'https://github.com/iron-meteor/iron-dynamic-template'
 });
 
-Package.on_use(function (api) {
-  api.versionsFrom('METEOR@0.9.2');
+Package.onUse(function (api) {
+  api.versionsFrom('3.0.2');
 
   api.use('blaze');
   api.use('underscore');
@@ -20,14 +20,14 @@ Package.on_use(function (api) {
   api.use('iron:core@1.0.11');
   api.imply('iron:core');
 
-  api.add_files('version_conflict_error.js');
-  api.add_files('dynamic_template.html');
-  api.add_files('dynamic_template.js');
-  api.add_files('blaze_overrides.js');
+  api.addFiles('version_conflict_error.js');
+  api.addFiles('dynamic_template.html');
+  api.addFiles('dynamic_template.js');
+  api.addFiles('blaze_overrides.js');
 });
 
-Package.on_test(function (api) {
-  api.versionsFrom('METEOR@0.9.2');
+Package.onTest(function (api) {
+  api.versionsFrom('3.0.2');
 
   api.use('iron:dynamic-template');
   api.use('templating');
@@ -36,6 +36,6 @@ Package.on_test(function (api) {
   api.use('blaze');
   api.use('deps');
 
-  api.add_files('dynamic_template_test.html', 'client');
-  api.add_files('dynamic_template_test.js', 'client');
+  api.addFiles('dynamic_template_test.html', 'client');
+  api.addFiles('dynamic_template_test.js', 'client');
 });
